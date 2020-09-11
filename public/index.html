@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="#">
+  <title>Weather</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Adamina">
+  <link rel="manifest" href="/manifest.webmanifest">
+</head>
+<body>
+  <div id="container">
+    <nav id="navbar" class="heavy-grid-item1" role="navigation">
+      <ul>
+        <form id="your-form" onsubmit="return false">
+        <li>
+          <input type="text" name="location" placeholder="Enter location" id="user-input" />
+        </li>
+        <li>
+          <input type="submit" value="Submit" id="submit-input" role="button" />
+        </li>
+        </form>
+      </ul>
+    </nav>
+  
+    <section id="section-two" class="heavy-grid-item2" role="region">
+      <h2 class="font-serif" id="highlight">Today's highlight</h2>
+      <div class="grid-container">
+        <div class="grid-item">
+          <p id="coord-title" class="title">Coordinates</p>
+          <p><span id="lat-value"></span>  lat</p>
+          <p><span id="lon-value"></span>  lon</p>
+        </div>
+        <div id="sunrise-sunset" class="grid-item">
+          <p id="sunrise-sunset-title" class="title">Sunrise & sunset</p>
+          <p><span id="sunrise"></span> sunrise</p>
+          <p><span id="sunset"></span> sunset</p>
+        </div>
+        <div id="wind-status" class="grid-item">
+          <p id="wind-status-title" class="title">Wind Status</p>
+          <p><span id="wind-status-speed" class="si-unit"></span> km/h</p>
+        </div>
+        <div class="grid-item">
+          <p id="visibility-title" class="title">Visibility</p>
+          <p><span id="visibility" class="si-unit"></span> km</p>
+        </div>
+        <div class="grid-item">
+          <p id="humidity-title" class="title">Humidity</p>
+          <p><span id="humidity" class="si-unit"></span> %</p>
+        </div>
+        <div class="grid-item">
+          <p class="title">Pressure</p>
+          <p><span id="pressure" class="si-unit"></span> mb</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-three" class="heavy-grid-item3">
+      <div class="place section-three-grid-item1">
+        <p id="place-city"></p>
+        <p id="place-country"></p>
+        <p id="place-date" class="title"></p>
+      </div>
+      <div class="weather-today section-three-grid-item2">
+        <p class="font-serif centre">Today</p>
+        <img src="" alt="Weather icon" id="weather-today-icon" role="img" />
+        <p><span id="weather-today-temperature"></span> <span class="top-float">&#8451;</span></p>
+        <p id="weather-today-comment"></p>
+      </div>
+    </section>
+
+    
+  </div>
+  <div id="loader"></div>
+
+  
+  <script src="index.js"></script>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="/__/firebase/7.20.0/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="/__/firebase/7.20.0/firebase-analytics.js"></script>
+
+  <!-- Initialize Firebase -->
+  <script src="/__/firebase/init.js"></script>
+</body>
+
+</html>
